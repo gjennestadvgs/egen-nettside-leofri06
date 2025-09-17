@@ -14,6 +14,7 @@ html, body {
     --background: rgb(255, 255, 255);
     --text-primary: rgb(0, 0, 0);
     --header: rgb(205, 205, 205);
+    --buttons: rgb(173, 173, 173);
 }
 /* Les darkmode.txt */
 .darkmode {
@@ -25,6 +26,7 @@ html, body {
     --background: rgb(31, 31, 31);
     --text-primary: rgb(255, 255, 255);
     --header: rgb(49, 49, 49);
+    --buttons: rgb(60, 60, 60);
 }
 
 /* Font */
@@ -70,7 +72,7 @@ ul li a {
 }
 ul li a:hover {
     scale: 1.05;
-    background-color: #111111;
+    background-color: var(--buttons);
 }
 
 /* Grid layout */
