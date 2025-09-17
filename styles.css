@@ -59,6 +59,13 @@ body {
     transition: background-color 0.3s, color 0.3s;
 }
 
+.textleft {
+    text-align: left;
+}
+.textright {
+    text-align: right;
+}
+
 /* Header */
 header ul {
     list-style-type: none;
@@ -104,16 +111,28 @@ header ul li a:hover {
     width: auto;
 }
 
+/* Om meg seksjon */
 .ommeg {
+    padding: 20px;
     grid-area: ommeg;
     background-color: var(--background-accent);
+    display: flex;
+    align-items: left;
+    gap: 32px;
     transition: background-color 0.3s ease, color 0.3s ease;
 }
-
-.ommeg > p {
+.ommeg p {
     font-size: 20px;
 }
 
+.ommeg .portrett {
+    position: static;
+    width: 400px;
+    margin-left: 10vh;
+    border-radius: 10%;
+}
+
+/* Footer */
 .footer {
     position: relative;
     margin-top: 80vh;
