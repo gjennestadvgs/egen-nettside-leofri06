@@ -11,8 +11,11 @@ html, body {
     --primary3: rgb(8, 193, 255);
     --primary4: rgb(0, 128, 171);
     --primary5: rgb(0, 111, 148);
+
     --background: rgb(255, 255, 255);
+    --background-accent: rgb(240, 240, 240);
     --text-primary: rgb(0, 0, 0);
+
     --header: rgb(205, 205, 205);
     --buttons: rgb(173, 173, 173);
 }
@@ -23,8 +26,11 @@ html, body {
     --primary3: rgb(8, 193, 255);
     --primary2: rgb(0, 128, 171);
     --primary1: rgb(0, 111, 148);
+    
     --background: rgb(31, 31, 31);
+    --background-accent: rgb(40, 40, 40);
     --text-primary: rgb(255, 255, 255);
+
     --header: rgb(49, 49, 49);
     --buttons: rgb(60, 60, 60);
 }
@@ -79,6 +85,7 @@ ul li a:hover {
 .container {
     display: grid;
     grid-template-areas: 
+        "ommeg ommeg ommeg . ."
         "main main main main main"
         "footer footer footer footer footer";
     transition: background-color 0.3s ease, color 0.3s ease;
@@ -91,14 +98,16 @@ ul li a:hover {
 
 .main {
     grid-area: main;
-    min-height: 100vh;
     width: auto;
 }
+.ommeg {
+    grid-area: ommeg;
+    background-color: var(--background-accent);
+}
 .footer {
+    position: relative;
+    margin-top: 80vh;
     grid-area: footer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     width: 100%;
     background: var(--primary1);
     transition: background-color 0.3s ease, color 0.3s ease;
