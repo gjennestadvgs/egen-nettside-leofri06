@@ -94,6 +94,17 @@ ul li a:hover {
 }
 .footer {
     grid-area: footer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background: var(--primary1);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+.footer p {
+    font-size: 15px;
+    color: var(--primary4);
+    transition: color 0.3s ease;
 }
 
 /* Klasser */
@@ -110,5 +121,10 @@ ul li a:hover {
 #darkmodeicon {
     width: 30px;
     height: 30px;
+}
+
+.logo {
+    height: 40px;
+    margin: 5px;
 }
 }
