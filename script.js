@@ -12,3 +12,17 @@ function darkmode() {
     }
     localStorage.setItem("darkMode", document.body.classList.contains("darkmode")); // Brukte litt autofill, men forstår konseptet
 }
+
+document.querySelectorAll("a").forEach(link => {
+    link.addEventListener("click", function(e) {
+        e.preventDefault(); // stopp vanlig link
+        document.body.classList.add("fade-out");
+        setTimeout(() => {
+            window.location = this.href; // bytt side etter 200ms
+        }, 200); // tid i ms
+    });
+});
+
+window.addEventListener("load", () => {
+    document.body.classList.add("fade-in");
+});

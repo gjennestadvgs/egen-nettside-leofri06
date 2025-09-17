@@ -35,7 +35,6 @@ html, body {
     --buttons: rgb(60, 60, 60);
 }
 
-
 /* Font */
 h1, h2, h3, h4, h5, h6 {
     font-family: "Quicksand", sans-serif;
@@ -55,9 +54,16 @@ p, a {
 
 /* Generelle stiler */
 body {
+    opacity: 0;
     background-color: var(--background);
     color: var(--text-primary);
-    transition: background-color 0.3s, color 0.3s;
+    transition: background-color 0.3s, color 0.3s, opacity 0.2s ease;
+}
+body.fade-in {
+    opacity: 1;
+}
+body.fade-out {
+    opacity: 0;
 }
 
 .textleft {
