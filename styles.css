@@ -1,3 +1,25 @@
+/** Farger **/
+/** Jeg har brukt ChatGPT for å lære dette konseptet (farger.txt)**/
+:root {
+    --color-primary: rgb(8, 193, 255);
+    --primary1: rgb(91, 214, 255);
+    --primary2: rgb(67, 208, 255);
+    --primary3: rgb(0, 128, 171);
+    --primary4: rgb(0, 111, 148);
+    --color-background: rgb(255, 255, 255);
+}
+
+.dark-mode {
+    --color-primary: rgb(8, 193, 255);
+    --primary1: rgb(91, 214, 255);
+    --primary2: rgb(67, 208, 255);
+    --primary3: rgb(0, 128, 171);
+    --primary4: rgb(0, 111, 148);
+    --color-background: rgb(18, 18, 18);
+}
+
+/** Font **/
+
 h1 {
     font-family: "Quicksand", sans-serif;
     font-optical-sizing: auto;
