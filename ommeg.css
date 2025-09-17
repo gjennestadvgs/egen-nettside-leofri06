@@ -1,0 +1,21 @@
+@media only screen {
+/* Om meg seksjon */
+.ommeg {
+    font-size: 40px;
+    padding: 20px;
+    background-color: var(--background-accent);
+    display: flex;
+    align-items: left;
+    gap: 32px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+.ommeg p {
+    font-size: 20px;
+}
+.ommeg .portrett {
+    position: static;
+    width: 400px;
+    margin-left: 10vh;
+    border-radius: 10%;
+}
+}
