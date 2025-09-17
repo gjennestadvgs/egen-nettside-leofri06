@@ -1,0 +1,3 @@
+ChatGPT spurte meg også om jeg ville lære hvordan man kunne lage en enkel
+dark-mode knapp, så jeg sa ja. Da testet jeg det ut, men planlegger å lage
+den "offisielle" knappen selv

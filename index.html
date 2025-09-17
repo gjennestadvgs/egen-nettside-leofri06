@@ -8,10 +8,19 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Spline+Sans:wght@300..700&display=swap" rel="stylesheet">
     </head>
-    <body>
+    <body >
         <header>
             <h1>Leo</h1>
             <p>Dette er en test av fonter</p>
         </header>
+        <main>
+            <button id="toggleButton">Dark mode</button>
+            <script>
+                const button = document.getElementById('toggleButton');
+                button.addEventListener('click', () => {
+                    document.body.classList.toggle('dark-mode');
+                });
+            </script>
+        </main>
     </body>
 </html>

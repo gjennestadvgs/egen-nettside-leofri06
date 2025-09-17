@@ -7,6 +7,7 @@
     --primary3: rgb(0, 128, 171);
     --primary4: rgb(0, 111, 148);
     --color-background: rgb(255, 255, 255);
+    --text-primary: rgb(0, 0, 0);
 }
 
 .dark-mode {
@@ -15,7 +16,8 @@
     --primary2: rgb(67, 208, 255);
     --primary3: rgb(0, 128, 171);
     --primary4: rgb(0, 111, 148);
-    --color-background: rgb(18, 18, 18);
+    --color-background: rgb(31, 31, 31);
+    --text-primary: rgb(255, 255, 255);
 }
 
 /** Font **/
@@ -31,4 +33,12 @@ p {
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
+}
+
+
+/** Generelle stiler **/
+body {
+    background-color: var(--color-background);
+    color: var(--text-primary);
+    transition: background-color 0.3s, color 0.3s;
 }
