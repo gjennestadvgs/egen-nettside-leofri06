@@ -11,11 +11,29 @@
 }
 .ommeg p {
     font-size: 20px;
+    max-width: 600px;
 }
 .ommeg .portrett {
     position: static;
     width: 400px;
+    height: 500px;
+    object-fit: cover;
     margin-left: 10vh;
     border-radius: 10%;
 }
+}
+
+@media (max-width: 900px) {
+    .ommeg .portrett {
+        width: 4em;
+        height: 5em;
+        margin-left: 0;
+    }
+    .ommeg h1 {
+        font-size: 30px;
+    }
+    .ommeg p {
+        font-size: 16px;
+        max-width: 400px;
+    }
 }

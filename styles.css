@@ -92,12 +92,15 @@ header ul li a:hover {
     scale: 1.05;
     background-color: var(--buttons);
 }
+header ul li a.active {
+    text-decoration: underline;
+}
 .darkmodebutton {
-    margin-top: 8px;
-    margin-right: 10px;
+    margin: 7px 10px;
     background: none;
     border: none;
-    transition: scale 0.3s;
+    overflow: hidden;
+    transition: scale 0.3s ease;
 }
 .darkmodebutton:hover {
     scale: 1.05;
