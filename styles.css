@@ -91,30 +91,11 @@ header ul li a:hover {
     background-color: var(--buttons);
 }
 
-/* Grid layout */
-.container {
-    display: grid;
-    grid-template-areas: 
-        "ommeg ommeg ommeg . ."
-        "main main main main main"
-        "footer footer footer footer footer";
-    transition: background-color 0.3s ease, color 0.3s ease;
-}
-.container > div {
-    font-size: 30px;
-    text-align: center;
-    transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-.main {
-    grid-area: main;
-    width: auto;
-}
 
 /* Om meg seksjon */
 .ommeg {
+    font-size: 40px;
     padding: 20px;
-    grid-area: ommeg;
     background-color: var(--background-accent);
     display: flex;
     align-items: left;
@@ -124,7 +105,6 @@ header ul li a:hover {
 .ommeg p {
     font-size: 20px;
 }
-
 .ommeg .portrett {
     position: static;
     width: 400px;
@@ -134,10 +114,14 @@ header ul li a:hover {
 
 /* Footer */
 .footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: relative;
     margin-top: 80vh;
     grid-area: footer;
     width: 100%;
+    height: 40px;
     background: var(--primary1);
     transition: background-color 0.3s ease, color 0.3s ease;
 }
