@@ -1,5 +1,5 @@
-/** Farger **/
-/** Jeg har brukt ChatGPT for å lære dette konseptet (farger.txt)**/
+/* Farger */
+/* Jeg har brukt ChatGPT for å lære dette konseptet ( les farger.txt)*/
 :root {
     --color-primary: rgb(8, 193, 255);
     --primary1: rgb(91, 214, 255);
@@ -10,6 +10,7 @@
     --text-primary: rgb(0, 0, 0);
 }
 
+/* Les darkmode.txt */
 .dark-mode {
     --color-primary: rgb(8, 193, 255);
     --primary1: rgb(91, 214, 255);
@@ -20,7 +21,7 @@
     --text-primary: rgb(255, 255, 255);
 }
 
-/** Font **/
+/* Font */
 
 h1 {
     font-family: "Quicksand", sans-serif;
@@ -36,7 +37,7 @@ p {
 }
 
 
-/** Generelle stiler **/
+/* Generelle stiler */
 body {
     background-color: var(--color-background);
     color: var(--text-primary);
