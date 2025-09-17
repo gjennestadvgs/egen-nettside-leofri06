@@ -1,28 +1,27 @@
 /* Farger */
 /* Jeg har brukt ChatGPT for å lære dette konseptet ( les farger.txt)*/
 :root {
-    --color-primary: rgb(8, 193, 255);
     --primary1: rgb(91, 214, 255);
     --primary2: rgb(67, 208, 255);
-    --primary3: rgb(0, 128, 171);
-    --primary4: rgb(0, 111, 148);
+    --primary3: rgb(8, 193, 255);
+    --primary4: rgb(0, 128, 171);
+    --primary5: rgb(0, 111, 148);
     --color-background: rgb(255, 255, 255);
     --text-primary: rgb(0, 0, 0);
 }
 
 /* Les darkmode.txt */
-.dark-mode {
-    --color-primary: rgb(8, 193, 255);
+.darkmode {
     --primary1: rgb(91, 214, 255);
     --primary2: rgb(67, 208, 255);
-    --primary3: rgb(0, 128, 171);
-    --primary4: rgb(0, 111, 148);
+    --primary3: rgb(8, 193, 255);
+    --primary4: rgb(0, 128, 171);
+    --primary5: rgb(0, 111, 148);
     --color-background: rgb(31, 31, 31);
     --text-primary: rgb(255, 255, 255);
 }
 
 /* Font */
-
 h1 {
     font-family: "Quicksand", sans-serif;
     font-optical-sizing: auto;
@@ -42,4 +41,22 @@ body {
     background-color: var(--color-background);
     color: var(--text-primary);
     transition: background-color 0.3s, color 0.3s;
+}
+
+/* Klasser */
+.darkmodebutton {
+    background: none;
+    border: none;
+    transition: scale 0.3s;
+}
+
+.darkmodebutton:hover {
+    scale: 1.05;
+    cursor: pointer;
+}
+
+#darkmodeicon {
+    display: grid;
+    width: 30px;
+    height: 30px;
 }
