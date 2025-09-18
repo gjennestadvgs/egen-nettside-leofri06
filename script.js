@@ -7,12 +7,19 @@ function darkmode() {
         logo.src="images/gjennestadlogo_white.png";
     }
     else {
-        document.body.classList.add("lightmode");
         icon.src="images/icons/sun_black.svg";
         logo.src="images/gjennestadlogo_black.png";
     }
     localStorage.setItem("darkMode", document.body.classList.contains("darkmode")); // Brukte litt autofill, men forstår konseptet
 }
+// Kode under skrevet av ChatGPT
+
+// Sjekk om brukeren foretrekker dark mode
+if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+    darkmode(); // Denne skrev jeg inn selv
+}
+
+// Slutt på ChatGPT
 
 document.querySelectorAll("a").forEach(link => {
     link.addEventListener("click", function(e) {
