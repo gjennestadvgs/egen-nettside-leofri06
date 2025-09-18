@@ -1,3 +1,4 @@
+// funksjon for å endre til dark mode
 function darkmode() {
     document.body.classList.toggle("darkmode");
     const icon = document.getElementById("darkmodeicon");
@@ -14,6 +15,7 @@ function darkmode() {
     localStorage.setItem("darkMode", document.body.classList.contains("darkmode")); // Brukte litt autofill, men forstår konseptet
 }
 
+// Funksjon for å fade ut siden så overganger ikke blir så brå
 document.querySelectorAll("a").forEach(link => {
     link.addEventListener("click", function(e) {
         e.preventDefault(); // stopp vanlig link
@@ -24,6 +26,7 @@ document.querySelectorAll("a").forEach(link => {
     });
 });
 
+// funksjon for å fade inn siden så overganger ikke blir så brå
 window.addEventListener("load", () => {
     document.body.classList.add("fade-in");
 });
