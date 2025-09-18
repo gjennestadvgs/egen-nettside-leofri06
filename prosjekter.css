@@ -1,8 +1,10 @@
+/* Grunnkode tatt fra Jan Olav, som fikk delvis fra KI */
 .prosjekt-oversikt {
     display: grid; /* Gjør elementet om til et rutenett */
     grid-template-columns: repeat(3, 1fr); /* Lager 3 like brede kolonner */
     gap: 10px; /* Avstand mellom prosjektkortene */
     margin: 0 auto; /* Sentrerer rutenettet på siden */
+    margin-top: 20px; /* Litt avstand fra toppen */
     max-width: 1100px; /* Begrenser bredden for større skjermer */
     padding: 10px; /* Legger til litt padding rundt rutenettet */
 }
@@ -25,10 +27,11 @@
 
 /* Stil for teksten inni kortet */
 .prosjekt-kort h3, .prosjekt-kort p {
-    padding-left: 10px; /* Legger til litt avstand rundt teksten */
+    text-align: center; /* Sentrerer teksten */
 }
 .prosjekt-kort:hover {
     transform: translateY(-5px); /* Løfter kortet litt opp */
+    cursor: pointer; /* Endrer musepekeren til en hånd */
 }
 /* KI slutt */
 /* mindre grid på mindre skjerm*/
