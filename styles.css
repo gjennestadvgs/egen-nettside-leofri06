@@ -4,7 +4,7 @@ html, body {
     padding: 0;
 }
 /* Farger */
-/* Jeg har brukt ChatGPT for å lære dette konseptet ( les farger.txt)*/
+/* Jeg har brukt ChatGPT for å lære dette konseptet (les farger.txt)*/
 :root {
     --primary1: rgb(91, 214, 255);
     --primary2: rgb(67, 208, 255);
@@ -19,37 +19,8 @@ html, body {
     --header: rgb(205, 205, 205);
     --buttons: rgb(173, 173, 173);
 }
+
 /* Les darkmode.txt */
-@media (prefers-color-scheme: dark) {
-    :root {
-        --primary5: rgb(91, 214, 255);
-        --primary4: rgb(67, 208, 255);
-        --primary3: rgb(8, 193, 255);
-        --primary2: rgb(0, 128, 171);
-        --primary1: rgb(0, 111, 148);
-        
-        --background: rgb(31, 31, 31);
-        --background-accent: rgb(40, 40, 40);
-        --text-primary: rgb(255, 255, 255);
-
-        --header: rgb(49, 49, 49);
-        --buttons: rgb(60, 60, 60);
-    }
-}
-.lightmode {
-    --primary1: rgb(91, 214, 255);
-    --primary2: rgb(67, 208, 255);
-    --primary3: rgb(8, 193, 255);
-    --primary4: rgb(0, 128, 171);
-    --primary5: rgb(0, 111, 148);
-
-    --background: rgb(255, 255, 255);
-    --background-accent: rgb(240, 240, 240);
-    --text-primary: rgb(0, 0, 0);
-
-    --header: rgb(205, 205, 205);
-    --buttons: rgb(173, 173, 173);
-}
 .darkmode {
     --primary5: rgb(91, 214, 255);
     --primary4: rgb(67, 208, 255);
