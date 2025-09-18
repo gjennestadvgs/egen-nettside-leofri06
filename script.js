@@ -7,6 +7,7 @@ function darkmode() {
         logo.src="images/gjennestadlogo_white.png";
     }
     else {
+        document.body.classList.add("lightmode");
         icon.src="images/icons/sun_black.svg";
         logo.src="images/gjennestadlogo_black.png";
     }
