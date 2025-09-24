@@ -1,12 +1,3 @@
-.scale {
-    scale: 1;
-}
-
-.scale:hover {
-    transition: scale 0.5s ease-in-out;
-    scale: 10;
-}
-
 /* Grunnkode tatt fra Jan Olav, som fikk delvis fra KI */
 .prosjekt-oversikt {
     display: grid; /* Gjør elementet om til et rutenett */

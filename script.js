@@ -1,30 +1,45 @@
+// DARK MODE (har brukt litt autofill + hjelp fra KI)
+// Sjekker hvilken innstilling som er lagret i localStorage
+if (localStorage.getItem("darkmode") === "true") {
+    console.log("Dark mode is enabled from localStorage");
+    darkmode();
+} else if (localStorage.getItem("darkmode") === "false") {
+    console.log("Dark mode is disabled from localStorage");
+}
+// Hvis ingen innstilling er lagret, sjekk systeminnstillingene
+else if (window.matchMedia('(prefers-color-scheme: dark)').matches) { // denne linjen var skrevet av ChatGPT
+    console.log("User prefers dark mode");
+    darkmode();
+}
 // funksjon for å endre til dark mode
 function darkmode() {
+    console.log("Dark mode function triggered");
     document.body.classList.toggle("darkmode");
-    const icon = document.getElementById("darkmodeicon");
-    const logo = document.getElementById("gjennestadlogo");
-    const goBackButton = document.querySelector(".goBackButton");
+    const icons = document.getElementsByClassName("menyknapper");
+    // Denne skrev KI v
+    for (let i = 0; i < icons.length; i++) {
+        console.log("Toggling icon " + (i + 1));
+        let icon = icons[i];
+        let src = icon.src;
+        if (src.includes("white")) {
+            icon.src = src.replace("white", "black");
+            console.log("Successfully changed icon to light mode");
+        } else {
+            icon.src = src.replace("black", "white");
+            console.log("Successfully changed icon to dark mode");
+        }
+    }
+    // Slutt på KI
     if (document.body.classList.contains("darkmode")) {
-        icon.src="images/icons/sun_white.svg";
-        logo.src="images/gjennestadlogo_white.png";
-        goBackButton.src="images/icons/goback_white.svg";
+        localStorage.setItem("darkmode", "true");
+        console.log("Dark mode enabled and saved to localStorage");
+    } else {
+        localStorage.setItem("darkmode", "false");
+        console.log("Dark mode disabled and saved to localStorage");
     }
-    else {
-        icon.src="images/icons/sun_black.svg";
-        logo.src="images/gjennestadlogo_black.png";
-        goBackButton.src="images/icons/goback_black.svg";
-    }
-    localStorage.setItem("darkMode", document.body.classList.contains("darkmode")); // Brukte litt autofill, men forstår konseptet
-}
-// Kode under skrevet av ChatGPT
-
-// Sjekk om brukeren foretrekker dark mode
-if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-    darkmode(); // Denne skrev jeg inn selv
 }
 
-// Slutt på ChatGPT
-
+// Skrevet av KI v
 // Funksjon for å fade ut siden så overganger ikke blir så brå
 document.querySelectorAll("a").forEach(link => {
     link.addEventListener("click", function(e) {
@@ -40,37 +55,3 @@ document.querySelectorAll("a").forEach(link => {
 window.addEventListener("load", () => {
     document.body.classList.add("fade-in");
 });
-
-function prosjektModal(ID, imgSrc, title, desc) {
-    localStorage.clear();
-    localStorage.setItem("prosjektImg", imgSrc);
-    localStorage.setItem("prosjektTitle", title);
-    localStorage.setItem("prosjektDesc", desc);    
-    document.getElementById(ID).classList.add("scale");
-    setTimeout(() => {
-        document.body.classList.add("fade-out");
-        setTimeout(() => {
-            window.location = "prosjektDive.html"; // bytt side etter 200ms
-    }, 200);}, 200); // tid i ms
-}
-function getProsjektModal() {
-    const imgSrc = localStorage.getItem("prosjektImg");
-    const title = localStorage.getItem("prosjektTitle");
-    const desc = localStorage.getItem("prosjektDesc");
-    document.getElementById("prosjektImg").src = imgSrc;
-    document.getElementById("prosjektTitle").innerText = title;
-    document.getElementById("prosjektDesc").innerText = desc;
-}
-window.addEventListener("load", getProsjektModal);
-
-function storageClear() {
-    localStorage.clear();
-}
-
-function goBack() {
-    document.body.classList.add("fade-out");
-    setTimeout(() => {
-        window.history.back(); // gå tilbake til forrige side etter 200ms
-        localStorage.clear();
-    }, 200); // tid i ms
-}
