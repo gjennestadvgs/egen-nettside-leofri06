@@ -18,24 +18,19 @@ function darkmode() {
     const icons = document.getElementsByClassName("menyknapper");
     // Denne skrev KI v
     for (let i = 0; i < icons.length; i++) {
-        console.log("Toggling icon " + (i + 1));
         let icon = icons[i];
         let src = icon.src;
         if (src.includes("white")) {
             icon.src = src.replace("white", "black");
-            console.log("Successfully changed icon to light mode");
         } else {
             icon.src = src.replace("black", "white");
-            console.log("Successfully changed icon to dark mode");
         }
     }
     // Slutt på KI
     if (document.body.classList.contains("darkmode")) {
         localStorage.setItem("darkmode", "true");
-        console.log("Dark mode enabled and saved to localStorage");
     } else {
         localStorage.setItem("darkmode", "false");
-        console.log("Dark mode disabled and saved to localStorage");
     }
 }
 
