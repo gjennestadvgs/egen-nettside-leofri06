@@ -1,3 +1,14 @@
+// Skrevet av KI
+document.querySelectorAll('.prosjekt-kort').forEach(card => {
+    card.addEventListener('click', function() {
+        const id = this.id;
+        const img = this.querySelector('img').src;
+        const title = this.querySelector('h3').textContent;
+        const desc = this.querySelector('p').textContent;
+        prosjektModal(id, img, title, desc);
+    });
+});
+
 function prosjektModal(ID, imgSrc, title, desc) {
     sessionStorage.setItem("prosjektImg", imgSrc);
     sessionStorage.setItem("prosjektTitle", title);
