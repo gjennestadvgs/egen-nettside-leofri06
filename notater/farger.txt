@@ -1,0 +1,6 @@
+Jeg spurte ChatGPT om det gikk an å lage klasser for farger
+Da svarte den først med å lage en klasse for tekst, og en for bakgrunn (per farge)
+
+Men så spurte den meg om jeg ville vite hvordan man lager det med css-variabler,
+og da viste den meg det som nå står i koden. Den fortalte meg litt om fordelene,
+spesielt om du vil lage "dark mode".
