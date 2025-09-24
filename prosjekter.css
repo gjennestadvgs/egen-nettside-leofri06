@@ -1,3 +1,12 @@
+.scale {
+    scale: 1;
+}
+
+.scale:hover {
+    transition: scale 0.5s ease-in-out;
+    scale: 10;
+}
+
 /* Grunnkode tatt fra Jan Olav, som fikk delvis fra KI */
 .prosjekt-oversikt {
     display: grid; /* Gjør elementet om til et rutenett */
@@ -33,6 +42,7 @@
     transform: translateY(-5px); /* Løfter kortet litt opp */
     cursor: pointer; /* Endrer musepekeren til en hånd */
 }
+
 /* KI slutt */
 /* mindre grid på mindre skjerm*/
 @media (max-width: 800px) {
@@ -44,4 +54,20 @@
 .prosjekt-oversikt {
     grid-template-columns: 1fr; /* Én kolonne på små skjermer */
 }
+}
+
+.prosjektModule img {
+    position: relative;
+    margin: 10px;
+    max-width: 400px;
+}
+.prosjektModule h3 {
+    position: relative;
+    margin: 10px;
+    max-width: 400px;
+}
+.prosjektModule p {
+    position: relative;
+    margin: 10px;
+    max-width: 400px;
 }
