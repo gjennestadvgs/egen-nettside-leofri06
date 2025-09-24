@@ -55,12 +55,17 @@
 .prosjektModule h3 {
     position: relative;
     margin: 10px;
-    max-width: 400px;
+    max-width: 600px;
+    font-size: 40px;
 }
 .prosjektModule p {
     position: relative;
     margin: 10px;
-    max-width: 400px;
+    max-width: 600px;
+    font-size: 20px
+}
+#prosjektDescExtended {
+    font-size: 15px
 }
 
 .goBackButton {

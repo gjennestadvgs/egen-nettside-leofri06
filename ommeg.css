@@ -37,3 +37,44 @@
         max-width: 400px;
     }
 }
+
+
+@media only screen {
+.kontakt {
+    margin-top: 10px;
+    font-size: 30px;
+    padding: 20px;
+    background-color: var(--background-accent);
+    display: flex;
+    justify-content: right;
+    gap: 32px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+.kontakt p {
+    font-size: 20px;
+    max-width: 600px;
+}
+.kontaktBilde {
+    position: static;
+    width: 400px;
+    height: 500px;
+    object-fit: cover;
+    margin-right: 10vh;
+    border-radius: 10%;
+}
+}
+
+@media (max-width: 900px) {
+    .kontaktBilde {
+        width: 4em;
+        height: 5em;
+        margin-right: 0;
+    }
+    .kontakt h1 {
+        font-size: 30px;
+    }
+    .kontakt p {
+        font-size: 16px;
+        max-width: 400px;
+    }
+}

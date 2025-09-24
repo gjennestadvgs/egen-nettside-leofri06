@@ -37,3 +37,20 @@ function goBack() {
         window.location = "prosjekter.html"; // gå tilbake til forrige side etter 200ms
     }, 200); // tid i ms
 }
+
+
+// Hente informasjon om prosjekter fra en seperat fil
+window.addEventListener("DOMContentLoaded", () => {
+    setTimeout(() => {
+        const title = document.getElementById("prosjektTitle").textContent.trim();
+        // Lag filnavn basert på tittel, f.eks. "Prosjekt 1" -> "prosjekt1.txt"
+        const filename = title.toLowerCase().replace(/\s+/g, '') + ".txt";
+        console.log(title)
+        console.log(filename)
+        fetch("tekstfiler/" + filename)
+            .then(response => response.ok ? response.text() : "Fant ikke tekstfil.")
+            .then(text => {
+                document.getElementById("prosjektDescExtended").innerHTML = text.replace(/\n/g, "<br>");
+            });
+    }, 100);
+});
