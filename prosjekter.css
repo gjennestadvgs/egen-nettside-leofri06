@@ -13,7 +13,7 @@
 .prosjekt-kort {
     border: 1px solid #ddd;
     border-radius: 8px; /* Avrundede hjørner */ 
-    overflow: hidden; /* Sikrer at bildet ikke stikker ut fra rammen */
+    overflow: auto; /* Sikrer at bildet ikke stikker ut fra rammen */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Gir en fin skyggeeffekt */
     transition: transform 0.4s; /* Animasjonseffekt ved hover */
 }
@@ -27,6 +27,8 @@
 
 /* Stil for teksten inni kortet */
 .prosjekt-kort h3, .prosjekt-kort p {
+    padding-left: 20px;
+    padding-right: 20px;
     text-align: center; /* Sentrerer teksten */
 }
 .prosjekt-kort:hover {
@@ -35,36 +37,36 @@
 }
 
 /* KI slutt */
-/* mindre grid på mindre skjerm*/
-@media (max-width: 800px) {
-.prosjekt-oversikt {
-    grid-template-columns: repeat(2, 1fr) ; /* Én kolonne på små skjermer */
-}
-}
-@media (max-width: 500px) {
-.prosjekt-oversikt {
-    grid-template-columns: 1fr; /* Én kolonne på små skjermer */
-}
-}
-
-.prosjektModule img {
-    position: relative;
+.prosjektModule {
+    font-size: 40px;
     margin: 10px;
-    max-width: 400px;
+    border-radius: 50px;
+    padding: 20px;
+    background-color: var(--background-accent);
+    display: flex;
+    align-items: left;
+    gap: 32px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+.prosjektModule img {
+    position: static;
+    width: 400px;
+    height: auto;
+    object-fit: cover;
+    margin-left: 5vh;
+    border-radius: 5%;
 }
 .prosjektModule h3 {
-    position: relative;
     margin: 10px;
     max-width: 600px;
     font-size: 40px;
 }
 .prosjektModule p {
-    position: relative;
     margin: 10px;
     max-width: 600px;
     font-size: 20px
 }
-#prosjektDescExtended {
+.prosjektDescExtended {
     font-size: 15px
 }
 
@@ -74,4 +76,46 @@
     width: 30px;
     height: 30px;
     cursor: pointer
+}
+
+/* mindre grid på mindre skjerm*/
+@media (max-width: 900px) {
+/* Prosjekt Oversikt*/
+.prosjekt-oversikt {
+    grid-template-columns: repeat(2, 1fr) ; /* Én kolonne på små skjermer */
+}
+/* Prosjekt Module*/
+.prosjektModule img {
+    margin-left: 10px;
+    width: 300px;
+    height: 400px;
+}
+.prosjektModule .textleft h3 {
+    font-size: xx-large;
+}
+.prosjektModule .textleft p {
+    font-size: large;
+}
+}
+
+@media (max-width: 500px) {
+/*Prosjekt Oversikt*/
+.prosjekt-oversikt {
+    grid-template-columns: 1fr; /* Én kolonne på små skjermer */
+}
+/*Prosjekt Module*/
+.prosjektModule img {
+    margin-left: 10px;
+    width: 150px;
+    height: 200px;
+}
+.prosjektModule .textleft h3 {
+    font-size: large;
+}
+.prosjektModule .textleft p {
+    font-size: medium;
+}
+.prosjektModule {
+    display: block;
+}
 }
