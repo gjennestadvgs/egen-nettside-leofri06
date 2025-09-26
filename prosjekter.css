@@ -71,8 +71,7 @@
 }
 
 .goBackButton {
-    margin: 10px;
-    margin-bottom: 0px;
+    margin: 20px 0px 0px 10px;
     width: 30px;
     height: 30px;
     cursor: pointer

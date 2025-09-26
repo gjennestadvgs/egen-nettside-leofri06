@@ -1,5 +1,6 @@
 @media only screen { /* For å tilpasse til skjermstørrelse */
 html, body {
+    height: 100%;
     margin: 0;
     padding: 0;
 }
@@ -54,7 +55,13 @@ p, a {
 
 
 /* Generelle stiler */
+.main-content {
+    flex: 1;
+}
 body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
     opacity: 0;
     background-color: var(--background);
     color: var(--text-primary);
@@ -127,12 +134,11 @@ header ul li a.active {
 
 /* Footer */
 .footer {
+    margin-top: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
-    margin-top: 20px;
-    grid-area: footer;
     width: 100%;
     height: 40px;
     background: var(--primary1);
