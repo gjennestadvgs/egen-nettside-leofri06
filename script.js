@@ -50,3 +50,10 @@ document.querySelectorAll("a").forEach(link => {
 window.addEventListener("load", () => {
     document.body.classList.add("fade-in");
 });
+
+
+// Menyfunksjoner
+function meny() {
+    document.getElementById("menu").classList.toggle("hidden")
+    document.getElementById("menu").classList.toggle("menuOpen")
+}
