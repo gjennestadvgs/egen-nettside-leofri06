@@ -169,6 +169,11 @@ header ul li a:hover {
     height: 30px;
 }
 
+#menuButton {
+    width: 30px;
+    height: 25px;
+}
+
 #gjennestadlogo {
     height: 30px;
     margin-top: 8px;
