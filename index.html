@@ -19,16 +19,21 @@
             <div>
                 <ul>
                     <a href="https://www.gjennestadvgs.no/" target="_blank"><img class="menyknapper" id="gjennestadlogo" src="images/gjennestadlogo_black.png" alt="Logo"></a>
-                    <li><button class="darkmodebutton" type="button" onclick="darkmode()"><img class="menyknapper" id="darkmodeicon" src="images/icons/sun_black.svg" alt="Dark Mode icon"></button></li>
-                    <li><a href="prosjekter.html">Prosjekter</a></li>
-                    <li><a href="index.html" class="active">Hjem</a></li>
+                    <li class="floatRight"><button class="menuKnapp" type="button" onclick="meny()"><img class="menyknapper" src="images/icons/goback_black.svg" alt="meny"></button></li>
+                    <li class="floatRight"><button class="darkmodebutton" type="button" onclick="darkmode()"><img class="menyknapper" id="darkmodeicon" src="images/icons/sun_black.svg" alt="Dark Mode icon"></button></li>
                 </ul>
+                <div id="menu" class="menu hidden">
+                    <ul>
+                        <li><a class="menuBox menuItem active" href="index.html">Hjem</a></li>
+                        <li><a class="menuBox menuItem" href="prosjekter.html">Prosjekter</a></li>
+                    </ul>
+                </div>
             </div>
         </header>
         <main class="main-content">
             <div class="container">
                 <div class="ommeg">
-                    <img class="portrett" src="images/ommeg.png" alt="Om Meg">
+                    <img class="portrett" src="images/bilder/ommeg.jpg" alt="Om Meg">
                     <div class="textleft">
                         <h1>Om meg</h1>
                         <p>
@@ -49,14 +54,14 @@
                                 <a href="tel:+4712345678">+47 12 34 56 78</a>
                             </p>
                         </div>
-                        <img class="kontaktBilde" src="images/kontaktmeg.png" alt="Kontakt meg">
+                        <img class="kontaktBilde" src="images//bilder/kontaktmeg.jpg" alt="Kontakt meg">
                     </div>
                 </div>
             </div>
         </main>
         <footer>
             <div class="footer">
-                <p>&copy; Copyright Gjennestad VGS 2025</p>
+                <a href="https://www.gjennestadvgs.no/">&copy; Copyright Gjennestad VGS 2025</a>
             </div>
         </footer>
     </body>

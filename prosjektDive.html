@@ -20,10 +20,15 @@
             <div>
                 <ul>
                     <a href="https://www.gjennestadvgs.no/" target="_blank"><img class="menyknapper" id="gjennestadlogo" src="images/gjennestadlogo_black.png" alt="Logo"></a>
-                    <li><button class="darkmodebutton" type="button" onclick="darkmode()"><img class="menyknapper" id="darkmodeicon" src="images/icons/sun_black.svg" alt="Dark Mode icon"></button></li>
-                    <li><a href="prosjekter.html" class="active">Prosjekter</a></li>
-                    <li><a href="index.html">Hjem</a></li>
+                    <li class="floatRight"><button class="menuKnapp" type="button" onclick="meny()"><img class="menyknapper" src="images/icons/goback_black.svg" alt="meny"></button></li>
+                    <li class="floatRight"><button class="darkmodebutton" type="button" onclick="darkmode()"><img class="menyknapper" id="darkmodeicon" src="images/icons/sun_black.svg" alt="Dark Mode icon"></button></li>
                 </ul>
+                <div id="menu" class="menu hidden">
+                    <ul>
+                        <li><a class="menuBox menuItem" href="index.html">Hjem</a></li>
+                        <li><a class="menuBox" href="prosjekter.html">Prosjekter</a></li>
+                    </ul>
+                </div>
             </div>
         </header>
         <main class="main-content">
@@ -41,7 +46,7 @@
         </main>
         <footer>
             <div class="footer">
-                <p>&copy; Copyright Gjennestad VGS 2025</p>
+                <a href="https://www.gjennestadvgs.no/">&copy; Copyright Gjennestad VGS 2025</a>
             </div>
         </footer>
     </body>
