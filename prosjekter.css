@@ -12,6 +12,8 @@
 
 /* Stil for hvert enkelt prosjektkort */
 .prosjekt-kort {
+    color: var(--text-primary);
+    text-decoration: none;
     border: 1px solid rgb(180, 180, 180);
     border-radius: 8px; /* Avrundede hjørner */ 
     overflow: auto; /* Sikrer at bildet ikke stikker ut fra rammen */
@@ -73,10 +75,11 @@
 }
 
 .goBackButton {
+    position: fixed;
     margin: 20px 0px 0px 10px;
     width: 30px;
     height: 30px;
-    cursor: pointer
+    cursor: pointer;
 }
 
 

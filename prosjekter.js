@@ -1,5 +1,5 @@
 // All Javascript her er helt eller for det meste generert av KI
-document.querySelectorAll('.prosjekt-kort').forEach(card => {
+document.querySelectorAll('.dive').forEach(card => {
     card.addEventListener('click', function() {
         const id = this.id;
         const img = this.querySelector('img').src;
@@ -34,7 +34,7 @@ window.addEventListener("load", getProsjektModal);
 function goBack() {
     document.body.classList.add("fade-out");
     setTimeout(() => {
-        window.location = "prosjekter.html"; // gå tilbake til prosjekter-siden etter 200ms
+        window.history.back(); // gå tilbake til prosjekter-siden etter 200ms
     }, 200); // tid i ms
 }
 
@@ -46,7 +46,7 @@ window.addEventListener("DOMContentLoaded", () => {
         document.getElementById("tittel").innerHTML = title
         // Lag filnavn basert på tittel, f.eks. "Prosjekt 1" -> "prosjekt1.txt"
         const filename = title.toLowerCase().replace(/\s+/g, '') + ".txt";
-        fetch("tekstfiler/" + filename)
+        fetch("prosjekttekstfiler/" + filename)
             .then(response => response.ok ? response.text() : "Fant ikke tekstfil.")
             .then(text => {
                 document.getElementById("prosjektDescExtended").innerHTML = text.replace(/\n/g, "<br>");

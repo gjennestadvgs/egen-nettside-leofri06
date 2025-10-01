@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="no">
     <head>
-        <title>Leo's Prosjekter</title>
+        <title>Leo's IT-Prosjekter</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <!-- Importerer css filer -->
@@ -26,7 +26,7 @@
                 <div id="menu" class="menu hidden">
                     <ul>
                         <li><a class="menuBox menuItem" href="index.html">Hjem</a></li>
-                        <li><a class="menuBox menuItem active" href="prosjekter.html">Prosjekter</a></li>
+                        <li><a class="menuBox menuItem" href="prosjekter.html">Prosjekter</a></li>
                     </ul>
                 </div>
             </div>
@@ -34,17 +34,15 @@
         <main class="main-content">
             <div class="container">
                 <div class="main">
+                    <div onclick="goBack()" class="goBackContainer">
+                        <img class="goBackButton menyknapper" src="images/icons/goback_black.svg" alt="Close Button">
+                    </div>                    
                     <div class="prosjekt-oversikt">
-                        <a class="prosjekt-kort" href="mediaprosjekter.html">
-                            <img src="images/Projekter/Media/Prosjekt-Arkitekturfotografi.jpg" alt="Mediaprosjekter">
-                            <h3>Mediaprosjekter</h3>
-                            <p>Prosjektene jeg har hatt i Media</p>
-                        </a>
-                        <a class="prosjekt-kort" href="itprosjekter.html">
-                            <img src="images/Projekter/IT/prosjekt-forstenettside.png" alt="IT-prosjekter">
-                            <h3>IT-prosjekter</h3>
-                            <p>Prosjektene jeg har hatt i IT</p>
-                        </a>
+                        <div id="prosjekt1" class="prosjekt-kort dive" onclick="prosjektModal()">
+                            <img src="images/Projekter/IT/prosjekt-forstenettside.png" alt="Min Første Nettside">
+                            <h3>Lage egen nettside</h3>
+                            <p>Vi skulle lage en egen nettside / portfølje</p>
+                        </div>
                     </div>
                 </div>
             </div>
