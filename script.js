@@ -38,6 +38,10 @@ function darkmode() {
 // Funksjon for å fade ut siden så overganger ikke blir så brå
 document.querySelectorAll("a").forEach(link => {
     link.addEventListener("click", function(e) {
+        if (link.target === "_blank") {
+            // La standard oppførsel skje (åpne i ny fane)
+            return;
+        }
         e.preventDefault(); // stopp vanlig link
         document.body.classList.add("fade-out");
         setTimeout(() => {
