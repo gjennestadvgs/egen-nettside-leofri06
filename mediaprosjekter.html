@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="no">
+    <head>
+        <title>Leo's Mediaprosjekter</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Importerer css filer -->
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="prosjekter.css">
+        <!-- Importerer javascript filer -->
+        <script src="script.js" defer></script>
+        <script src="prosjekter.js" defer></script>
+        <!-- Importerer fonter fra google -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Spline+Sans:wght@300..700&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <div class="header">
+                <ul>
+                    <a href="https://www.gjennestadvgs.no/" target="_blank"><img class="iconSize menyknapper" id="gjennestadlogo" src="images/gjennestadlogo_black.png" alt="Logo"></a>
+                    <li class="floatRight"><button class="menuKnapp" type="button" onclick="meny()"><img class="iconSize menyknapper" src="images/icons/menu_black.svg" alt="meny"></button></li>
+                    <li class="floatRight"><button class="menuKnapp" type="button" onclick="darkmode()"><img class="iconSize menyknapper" src="images/icons/sun_black.svg" alt="Dark Mode icon"></button></li>
+                </ul>
+                <div id="menu" class="menu hidden">
+                    <ul>
+                        <li><a class="menuBox menuItem" href="index.html">Hjem</a></li>
+                        <li><a class="menuBox menuItem" href="prosjekter.html">Prosjekter</a></li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+        <main class="main-content">
+            <div class="container">
+                <div class="main">
+                    <div onclick="goBack()" class="goBackContainer">
+                        <img class="goBackButton menyknapper" src="images/icons/goback_black.svg" alt="Close Button">
+                    </div>
+                    <div class="prosjekt-oversikt">
+                        <div id="prosjekt1" class="prosjekt-kort dive" onclick="prosjektModal()">
+                            <img src="images/Projekter/Media/Prosjekt-fjellpassasjen.jpg" alt="Filmplakat om filmen Fjellpassasjen">
+                            <h3>Lage filmplakat</h3>
+                            <p>En av oppgavene vi hadde, var å lage filmplakat</p>
+                        </div>
+                        <div id="prosjekt2" class="prosjekt-kort dive" onclick="prosjektModal()">
+                            <img src="images/Projekter/Media/Prosjekt-Eksponeringstrekanten.png" alt="Fredrik">
+                            <h3>Eksponeringstrekanten</h3>
+                            <p>Vi skulle ta bilder mens vi tenkte på Lukker, Blender og ISO</p>
+                        </div>
+                        <div id="prosjekt3" class="prosjekt-kort dive" onclick="prosjektModal()">
+                            <img src="images/Projekter/Media/Prosjekt-Photoshoptrening.jpg" alt="En ape som er redigert med sterke farger">
+                            <h3>Grunnleggende Photoshoptrening i RAW format</h3>
+                            <p>Vi har hatt trening på redigering i Photoshop</p>
+                        </div>
+                        <div id="prosjekt4" class="prosjekt-kort dive" onclick="prosjektModal()">
+                            <img src="images/Projekter/Media/Prosjekt-Melkeskummer.jpg" alt="En melkeskummer">
+                            <h3>Gjøre kjedelige ting kule</h3>
+                            <p>Vi skulle ta bilde av en verdagslig ting, og gjøre det kult</p>
+                        </div>
+                        <div id="prosjekt5" class="prosjekt-kort dive" onclick="prosjektModal()">
+                            <img src="images/Projekter/Media/Prosjekt-Arkitekturfotografi.jpg" alt="Arkitekturfotografi">
+                            <h3>Individuell Foto-oppgave</h3>
+                            <p>Målet var å fordype seg i en spesifikk sjanger av fotografi</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <div class="footer">
+                <a href="https://www.gjennestadvgs.no/">&copy; Copyright Gjennestad VGS 2025</a>
+            </div>
+        </footer>
+    </body>
+</html>
