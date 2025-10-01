@@ -1,4 +1,5 @@
-/* Grunnkode tatt fra Jan Olav, som fikk delvis fra KI */
+/* Mye av kode tatt fra Jan Olav, som fikk delvis fra KI */
+/* Optimailsert for egen bruk */
 .prosjekt-oversikt {
     display: grid; /* Gjør elementet om til et rutenett */
     grid-template-columns: repeat(3, 1fr); /* Lager 3 like brede kolonner */
@@ -11,11 +12,11 @@
 
 /* Stil for hvert enkelt prosjektkort */
 .prosjekt-kort {
-    border: 1px solid #ddd;
+    border: 1px solid rgb(180, 180, 180);
     border-radius: 8px; /* Avrundede hjørner */ 
     overflow: auto; /* Sikrer at bildet ikke stikker ut fra rammen */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Gir en fin skyggeeffekt */
-    transition: transform 0.4s; /* Animasjonseffekt ved hover */
+    transition: all 0.4s ease; /* Animasjonseffekt ved hover */
 }
 
 /* Stil for bildet inni kortet */
@@ -46,7 +47,7 @@
     display: flex;
     align-items: left;
     gap: 32px;
-    transition: background-color 0.3s ease, color 0.3s ease;
+    transition: all 0.3s ease;
 }
 .prosjektModule img {
     position: static;
@@ -55,6 +56,7 @@
     object-fit: cover;
     margin-left: 5vh;
     border-radius: 5%;
+    cursor: pointer;
 }
 .prosjektModule h3 {
     margin: 10px;
@@ -77,13 +79,42 @@
     cursor: pointer
 }
 
-/* mindre grid på mindre skjerm*/
-@media (max-width: 900px) {
-/* Prosjekt Oversikt*/
-.prosjekt-oversikt {
-    grid-template-columns: repeat(2, 1fr) ; /* Én kolonne på små skjermer */
+
+/* Forstørre bildet (gerenert av KI) */
+.img-popup {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s;
 }
-/* Prosjekt Module*/
+
+.img-popup.open {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.img-popup img {
+    max-width: 90vw;
+    max-height: 80vh;
+    border-radius: 16px;
+    box-shadow: 0 0 32px #0008;
+    background: #fff;
+}
+/* Slutt på KI */
+
+/* Tilpasset for mindre skjermer */
+@media (max-width: 900px) {
+.prosjekt-oversikt {
+    grid-template-columns: repeat(2, 1fr) ;
+}
 .prosjektModule img {
     margin-left: 10px;
     width: 300px;
@@ -98,11 +129,9 @@
 }
 
 @media (max-width: 500px) {
-/*Prosjekt Oversikt*/
 .prosjekt-oversikt {
-    grid-template-columns: 1fr; /* Én kolonne på små skjermer */
+    grid-template-columns: 1fr;
 }
-/*Prosjekt Module*/
 .prosjektModule img {
     margin-left: 10px;
     width: 150px;

@@ -1,6 +1,6 @@
 ChatGPT spurte meg også om jeg ville lære hvordan man kunne lage en enkel
 dark-mode knapp, så jeg sa ja. Da testet jeg det ut, men planlegger å lage
-den "offisielle" knappen selv
+den "offisielle" knappen selv (det har jeg nå gjort)
 
 ChatGPT fortalte meg også om konseptet med LocalStorage, så jeg leste meg litt opp
 på det, og fant ut hvordan jeg kan lagre dark mode valget til brukeren

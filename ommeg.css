@@ -1,5 +1,5 @@
 @media only screen {
-/* Om meg seksjon */
+/* CSS for Om meg-seksjonen */
 .ommeg {
     font-size: 40px;
     margin: 10px;
@@ -24,36 +24,8 @@
     margin-left: 5vh;
     border-radius: 10%;
 }
-}
-@media (max-width: 600px) {
-    .ommeg {
-    margin-left: auto;
-    margin-right: auto;
-    overflow: auto;
-    max-width: 325px;
-}
-.ommeg .portrett {
-    margin-top: 40px;
-}
-}
-@media (max-width: 1150px) {
-    .ommeg .portrett {
-        width: 100px;
-        height: 125px;
-        margin-left: 0;
-        margin-right: -15px;
-    }
-    .ommeg h1 {
-        font-size: 30px;
-    }
-    .ommeg p {
-        font-size: 16px;
-        max-width: 400px;
-    }
-}
 
-
-@media only screen {
+/* CSS for kontakt-seksjonen */
 .kontakt {
     margin-top: 10px;
     font-size: 30px;
@@ -78,17 +50,47 @@
 }
 }
 
+/* Optimalisering for mindre skjermer */
+@media (max-width: 1150px) {
+.ommeg .portrett {
+    width: 100px;
+    height: 125px;
+    margin-left: 0;
+    margin-right: -15px;
+}
+.ommeg h1 {
+    font-size: 30px;
+}
+.ommeg p {
+    font-size: 16px;
+    max-width: 400px;
+}
+}
+
+@media (max-width: 600px) {
+.ommeg {
+margin-left: auto;
+margin-right: auto;
+overflow: auto;
+max-width: 325px;
+}
+.ommeg .portrett {
+    margin-top: 40px;
+}
+}
+
+
 @media (max-width: 900px) {
-    .kontaktBilde {
-        width: 4em;
-        height: 5em;
-        margin-right: 0;
-    }
-    .kontakt h1 {
-        font-size: 30px;
-    }
-    .kontakt p {
-        font-size: 16px;
-        max-width: 400px;
-    }
+.kontaktBilde {
+    width: 4em;
+    height: 5em;
+    margin-right: 0;
+}
+.kontakt h1 {
+    font-size: 30px;
+}
+.kontakt p {
+    font-size: 16px;
+    max-width: 400px;
+}
 }

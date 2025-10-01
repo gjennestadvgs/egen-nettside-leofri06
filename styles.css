@@ -4,14 +4,15 @@ html, body {
     margin: 0;
     padding: 0;
 }
-/* Farger */
-/* Jeg har brukt ChatGPT for å lære dette konseptet (les farger.txt)*/
+
+/* Grunnfarger */
+/* Jeg har brukt ChatGPT for å lære om fargevariabler (les farger.txt)*/
 :root {
-    --primary1: rgb(91, 214, 255);
-    --primary2: rgb(67, 208, 255);
-    --primary3: rgb(8, 193, 255);
-    --primary4: rgb(0, 128, 171);
-    --primary5: rgb(0, 111, 148);
+    --accent1: rgb(91, 214, 255);
+    --accent2: rgb(67, 208, 255);
+    --accent3: rgb(8, 193, 255);
+    --accent4: rgb(0, 128, 171);
+    --accent5: rgb(0, 111, 148);
 
     --background: rgb(255, 255, 255);
     --background-accent: rgb(240, 240, 240);
@@ -23,11 +24,11 @@ html, body {
 
 /* Les darkmode.txt */
 .darkmode {
-    --primary5: rgb(91, 214, 255);
-    --primary4: rgb(67, 208, 255);
-    --primary3: rgb(8, 193, 255);
-    --primary2: rgb(0, 128, 171);
-    --primary1: rgb(0, 111, 148);
+    --accent5: rgb(91, 214, 255);
+    --accent4: rgb(67, 208, 255);
+    --accent3: rgb(8, 193, 255);
+    --accent2: rgb(0, 128, 171);
+    --accent1: rgb(0, 111, 148);
     
     --background: rgb(31, 31, 31);
     --background-accent: rgb(40, 40, 40);
@@ -65,95 +66,45 @@ body {
     opacity: 0;
     background-color: var(--background);
     color: var(--text-primary);
-    transition: background-color 0.3s, color 0.3s, opacity 0.2s ease;
+    transition: all 0.2s ease;
 }
-body.fade-in {
+.fade-in {
     opacity: 1;
 }
-body.fade-out {
+.fade-out {
     opacity: 0;
 }
 
+/* Generelle klasser som er fint å ha */
 .textleft {
     text-align: left;
 }
 .textright {
     text-align: right;
 }
+.floatRight {
+    float: right;
+}
 .hidden {
     display: none !important;
     pointer-events: none;
     opacity: 0;
-    transition: opacity 0.1s ease;
 }
 
 /* Header */
-.active {
+.menu ul li a.active {
     text-decoration: underline;
 }
-/* Meny */
-header ul {
+/* Det som alltid er synlig */
+.header ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
     background-color: var(--header);
-    transition: background-color 0.3s ease;
-}
-.floatRight {
-    float: right;
-}
-header ul li a {
-    display: block;
-    color: var(--text-primary);
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    transition: background-color 0.3s ease, scale 0.3s ease;
-}
-header ul li a:hover {
-    scale: 1.05;
-    background-color: var(--buttons);
+    transition: all 0.3s ease;
 }
 .menuKnapp {
-    display: block;
-    overflow: hidden;
-    padding: 10px 16px;
-    background: none;
-    border: none;
-    transition: background-color 0.3s ease, scale 0.3s ease
-}
-.menuKnapp:hover {
-    scale: 1.05;
-    background-color: var(--buttons);
-    cursor: pointer;
-}
-
-/* Popdown Meny */
-.menu {
-    position: fixed;
-    right: 0px;
-}
-.menuBox {
-    float: right;
-    display: block;
-    color: var(--text-primary);
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    transition: background-color 0.3s ease, scale 0.3s ease;
-}
-.menuOpen {
-    opacity: 1;
-    transition: opacity 0.1s ease;
-}
-.menuItem {
-    text-align: center;
-    width: 70%;
-}
-
-/* Dark Mode */
-.darkmodebutton {
     display: block;
     padding: 8px 16px 6px 16px;
     background: none;
@@ -161,27 +112,42 @@ header ul li a:hover {
     overflow: hidden;
     transition: scale 0.3s ease;
 }
-.darkmodebutton:hover {
+.menuKnapp:hover {
     scale: 1.05;
     background-color: var(--buttons);
     cursor: pointer;
 }
-#darkmodeicon {
-    width: 30px;
+.iconSize {
     height: 30px;
+    width: auto;
 }
 
-#menuButton {
-    width: 30px;
-    height: 25px;
+/* Popdown-meny */
+.menu {
+    position: fixed;
+    right: 0px;
+}
+.menuBox {
+    float: right;
+    color: var(--text-primary);
+    padding: 14px 16px;
+    text-decoration: none;
+}
+.menuItem:hover {
+    background-color: var(--buttons);
+    scale: 1.05;
+}
+.menuItem {
+    text-align: center;
+    width: 70%;
+    transition: all 0.3s ease;
 }
 
+/* ID for plassering av Gjennestad-logoen */
 #gjennestadlogo {
-    height: 30px;
     margin-top: 8px;
     margin-left: 10px;
 }
-
 
 /* Footer */
 .footer {
@@ -192,13 +158,13 @@ header ul li a:hover {
     position: relative;
     width: 100%;
     height: 40px;
-    background: var(--primary1);
-    transition: background-color 0.3s ease, color 0.3s ease;
+    background: var(--accent1);
+    transition: all 0.3s ease;
 }
 .footer a {
     font-family: "spline sans", sans-serif;
     font-size: 15px;
-    color: var(--primary4);
+    color: var(--accent4);
     transition: color 0.3s ease;
     text-decoration: none;
 }

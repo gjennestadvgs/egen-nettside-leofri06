@@ -55,5 +55,4 @@ window.addEventListener("load", () => {
 // Menyfunksjoner
 function meny() {
     document.getElementById("menu").classList.toggle("hidden")
-    document.getElementById("menu").classList.toggle("menuOpen")
 }
